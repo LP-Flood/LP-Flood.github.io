@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Floodplain Management</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
+    header { background:#005a9c; color:white; padding:2rem; text-align:center; }
+    section { padding:2rem; max-width:900px; margin: auto; }
+    h1, h2 { margin-top:0; }
+    .embed { width:100%; height:400px; border:1px solid #ccc; margin-bottom:1rem; }
+    .btn { display:inline-block; background:#005a9c; color:white; padding:.5rem 1rem; text-decoration:none; border-radius:4px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    @media(max-width:600px){ .grid { grid-template-columns:1fr } }
+    footer { background:#f5f5f5; text-align:center; padding:1rem; font-size:.9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>City of Petersburg Floodplain Resources</h1>
+    <p>Quickly check your flood risk & see what development is allowed.</p>
+  </header>
+
+  <!-- SECTION 1: Flood Zone Lookup -->
+  <section id="zone-check">
+    <h2>1. Are You in a Flood Zone?</h2>
+    <!-- ArcGIS Embed -->
+    <div class="embed">
+      <!-- Replace the src URL with your organization’s ArcGIS Web Map URL -->
+      <iframe src="https://experience.arcgis.com/experience/106f27e53e814a2fafc09e482e1fdc96/?embed&cache=0"
+              width="100%" height="100%" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <p>If the map won’t load, <a href="static-flood-map.png">
+      download a static flood zone map</a> instead.</p>
+    <p><a class="btn" href="https://msc.fema.gov/portal/home" target="_blank">
+      View FEMA Flood Map Service Center »
+    </a></p>
+  </section>
+
+  <!-- SECTION 2: Permits & Restrictions -->
+  <section id="permits">
+    <h2>2. If You’re in a Flood Zone, Here’s What You Need</h2>
+    <div class="grid">
+      <div>
+        <h3>Required Permits</h3>
+        <ul>
+          <li>Floodplain Development Permit</li>
+          <li>Elevation Certificate (before foundation poured)</li>
+          <li>Building Permit with floodproofing plan</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Development Prohibitions</h3>
+        <ul>
+          <li>No new residential structures below Base Flood Elevation</li>
+          <li>No fill or grading that alters natural floodplain drainage</li>
+          <li>No storage of hazardous materials within the floodway</li>
+        </ul>
+      </div>
+    </div>
+    <p>Full ordinance details in our <a href="https://library.municode.com/va/petersburg/codes/code_of_ordinances?nodeId=PTIICO_CH58FL_ARTIIFLMA" target="_blank">
+      Floodplain Management Ordinance</a>.</p>
+  </section>
+
+  <!-- SECTION 3: Dashboard / More Info -->
+  <section id="dashboard">
+    <h2>3. Real-Time Data & Reports</h2>
+    <!-- Power BI Embed -->
+    <div class="embed">
+      <!-- Replace URL with your Power BI report embed link -->
+      <iframe src="https://app.powerbi.com/view?r=YOUR_POWERBI_REPORT_ID"
+              width="100%" height="100%" frameborder="0" allowFullScreen>
+      </iframe>
+    </div>
+    <p><a class="btn" href="/reports/floodplain-dashboard.pdf" target="_blank">
+      Download Dashboard (PDF) »
+    </a></p>
+  </section>
+
+  <footer>
+    <p>Questions? Contact the Gloucester County Floodplain Management Office at <a href="mailto:floodplain@gloucesterva.gov">
+      floodplain@gloucesterva.gov</a> or (804) 693-0531.</p>
+  </footer>
+
+</body>
+</html>
